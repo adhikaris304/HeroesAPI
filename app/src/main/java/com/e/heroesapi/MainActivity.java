@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.time.chrono.HijrahEra;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText etName, etDesc;
     private Button btnSave;
+    private ImageView imageProfile;
+    String imagePath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         
         etName=findViewById(R.id.etName);
         etDesc=findViewById(R.id.etDesc);
+        imageProfile=findViewById(R.id.imgProfile);
         btnSave=findViewById(R.id.btnSave);
+
         
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
